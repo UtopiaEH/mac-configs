@@ -91,6 +91,9 @@ plugins=(
     docker-compose
     hasura
     fzf
+    pnpm
+    fzf-zsh-plugin
+    zsh-autosuggestions
   )
 
 source $ZSH/oh-my-zsh.sh
