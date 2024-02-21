@@ -6,11 +6,11 @@ if ! command -v lsof > /dev/null 2>&1; then
     exit 1
 fi
 
-# Get the list of ports starting with 30 and having 4 digits
-PORTS=$(lsof -i -P -n | grep -E ":30[0-9]{2}" | awk '{print $9}' | cut -d ':' -f 2 | sort -u)
+# Get the list of ports starting with 30 or 70 and having 4 digits
+PORTS=$(lsof -i -P -n | grep -E ":3[07][0-9]{2}" | awk '{print $9}' | cut -d ':' -f 2 | sort -u)
 
 if [ -z "$PORTS" ]; then
-    echo "No processes found using ports starting with 30 and having 4 digits"
+    echo "No processes found using ports starting with 30 or 70 and having 4 digits"
 else
     # Get the process ID(s) for each port and kill them
     for PORT in $PORTS; do
