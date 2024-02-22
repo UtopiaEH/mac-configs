@@ -93,6 +93,7 @@ plugins=(
     fzf
     pnpm
     fzf-zsh-plugin
+    zsh-syntax-highlighting
     zsh-autosuggestions
   )
 
@@ -124,12 +125,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH=$PATH:~/Applications./IntelliJ\ IDEA.app/Contents/MacOS/idea
 
- [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
